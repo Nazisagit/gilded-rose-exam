@@ -158,5 +158,9 @@ describe GildedRose do
         expect(items[0].quality).to eq(9)
       end
     end
+
+    context "when item name is 'Conjured'" do
+      let(:name) { 'Conjured' }
+    end
   end
 end
