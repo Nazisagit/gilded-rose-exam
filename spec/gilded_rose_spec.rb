@@ -159,8 +159,32 @@ describe GildedRose do
       end
     end
 
-    context "when item name is 'Conjured'" do
+    context "when item name is 'Conjured', it decreases quality at 2x the rate of a Normal Item" do
       let(:name) { 'Conjured' }
+
+      context "and quality is 8" do
+        let(:initial_quality) { 8 }
+
+        it "decreases quality to 6" do
+          expect(item.quality).to eq(6)
+        end
+      end
+
+      context "and quality is 0" do
+        let(:initial_quality) { 0 }
+
+        it "does not decrease in quality" do
+          expect(item.quality).to eq(0)
+        end
+      end
+
+      context "and quality is -1" do
+        let(:initial_sell_in) { -1 }
+
+        it "should not be negative and equal to 0 instead" do
+          expect(item.quality).to eq(0)
+        end
+      end
     end
   end
 end
