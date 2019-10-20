@@ -185,6 +185,20 @@ describe GildedRose do
           expect(item.quality).to eq(0)
         end
       end
+
+      context "with multiple items" do
+        let(:items) do
+          [
+            Item.new("Conjured", 5, 10),
+            Item.new("Aged Brie", 3, 10)
+          ]
+        end
+  
+        it "Conjured item should should lower their sellin by 1 and quality by 2" do
+          expect(items[0].sell_in).to eq(4)
+          expect(items[0].quality).to eq(8)
+        end
+      end
     end
   end
 end

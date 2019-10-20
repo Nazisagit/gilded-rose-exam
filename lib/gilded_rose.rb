@@ -20,7 +20,8 @@ class GildedRose
   end
 
   def reduce_quality_none_sulfaras_conjured(item)
-    if item.quality > 0 && item.name != @@names[2] && item.name != @@names[3]
+    if item.quality > 0 && item.name != @@names[2] && 
+      item.name != @@names[3]
       item.quality -= 1
     end
   end
@@ -33,7 +34,7 @@ class GildedRose
     end
   end
 
-  def reduce_quality_normal(item)
+  def reduce_quality_other(item)
     if item.name != @@names[1] && item.name != @@names[2] && 
       item.name != @@names[3] && item.quality > 0 
       item.quality -= 1
@@ -57,7 +58,7 @@ class GildedRose
       end
       if item.sell_in < 0
         if item.name != @@names[0]
-          reduce_quality_normal(item)
+          reduce_quality_other(item)
         else
           if item.quality < 50
             item.quality += 1
