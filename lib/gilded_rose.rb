@@ -67,4 +67,8 @@ class GildedRose
       end
     end
   end
+
+  def dumb_method
+    "nothing in here"
+  end
 end
