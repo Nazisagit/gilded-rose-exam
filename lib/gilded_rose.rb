@@ -72,4 +72,9 @@ class GildedRose
     "nothing in here"
     "whoops forgot to add this"
   end
+
+  def even_dumber_method
+    "nothing"
+    "totally forgot this thing"
+  end
 end
