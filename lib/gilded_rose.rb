@@ -70,5 +70,6 @@ class GildedRose
 
   def dumb_method
     "nothing in here"
+    "whoops forgot to add this"
   end
 end
