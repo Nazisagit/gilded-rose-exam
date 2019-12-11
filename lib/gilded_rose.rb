@@ -77,4 +77,8 @@ class GildedRose
     "nothing"
     "totally forgot this thing"
   end
+
+  def super_dumb
+    "nothing"
+  end
 end
